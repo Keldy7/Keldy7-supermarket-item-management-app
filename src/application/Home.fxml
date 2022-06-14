@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" stylesheets="@application.css">
+         <children>
+            <BorderPane prefHeight="401.0" prefWidth="280.0" style="-fx-background-color: #f2bf62;" AnchorPane.topAnchor="0.0">
+               <center>
+                  <ImageView fitHeight="150.0" fitWidth="209.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/main_icon.jpg" />
+                     </image>
+                  </ImageView>
+               </center>
+            </BorderPane>
+            <Label layoutX="347.0" layoutY="46.0" prefHeight="54.0" prefWidth="189.0" text="CONNEXION" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Dubai Bold" size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="2.0" />
+               </opaqueInsets>
+            </Label>
+            <TextField fx:id="userName" layoutX="347.0" layoutY="168.0" prefHeight="26.0" prefWidth="196.0" promptText="Entrer votre nom d'utilisateur" style="-fx-background-color: transparent; -fx-border-color: #eeba1f; -fx-border-width: 0px 0px 2px 0px;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="348.0" layoutY="140.0" text="Nom d'utilisateur" textFill="#ebb03a">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="349.0" layoutY="217.0" text="Mot de passe" textFill="#ebb03a">
+               <font>
+                  <Font name="Comic Sans MS" size="17.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passWord" layoutX="347.0" layoutY="245.0" prefHeight="26.0" prefWidth="196.0" promptText="Entrer votre mot de passe" style="-fx-background-color: transparent; -fx-border-color: #eeba1f; -fx-border-width: 0px 0px 2px 0px;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </PasswordField>
+            <Hyperlink layoutX="378.0" layoutY="353.0" style="-fx-color: #eeba1f;" text="Mot de passe oublié?" textFill="#eeba1f" underline="true" />
+            <Button fx:id="btnC" layoutX="390.0" layoutY="316.0" mnemonicParsing="false" onAction="#se_connecter" styleClass="btnCon" stylesheets="@application.css" text="Se connecter">
+               <font>
+                  <Font name="Dubai Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane layoutX="554.0" layoutY="5.0" prefHeight="24.0" prefWidth="42.0" style="-fx-background-color: #f2bf62; -fx-background-radius: 60 50 50 50;">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="8.0" layoutY="-1.0" onMouseClicked="#close_app" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cil-x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

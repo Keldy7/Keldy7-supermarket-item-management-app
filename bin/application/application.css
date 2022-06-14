@@ -1,0 +1,19 @@
+.btnCon, .btnIns, .btnAdd, .btnModif, .btnSup, .btnNouv, .btnImp, .btnRech{
+    -fx-font-family: "Ahoroni";
+    -fx-background-color: #f2bf62;
+    -fx-text-fill: #fff;
+}
+
+.btnCon:hover, .btnIns:hover, .btnAdd:hover, .btnSup:hover, .btnModif:hover, .btnNouv:hover, .btnImp:hover, .btnRech:hover{
+    -fx-background-color:#fff ;
+    -fx-text-fill: #f2bf62;
+    -fx-border-color:#f2bf62;
+    -fx-border-radius: 5px;
+    -fx-border-style: solid;
+}
+
+.btn_Art:hover, .btn_Cli:hover, .btn_Cat:hover, .btn_Rec:hover, .btn_Cai:hover, .btn_Four:hover,.btnChoix:hover{
+    -fx-border-radius: 10px;
+    -fx-border-style: solid;
+}
+

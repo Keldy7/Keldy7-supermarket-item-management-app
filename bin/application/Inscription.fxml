@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="345.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserController">
+   <children>
+      <Label layoutX="84.0" layoutY="52.0" prefHeight="54.0" prefWidth="189.0" text="INSCRIPTION" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Dubai Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="2.0" />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="87.0" layoutY="275.0" text="Mot de passe" textFill="#ebb03a">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <PasswordField layoutX="87.0" layoutY="299.0" prefHeight="26.0" prefWidth="196.0" promptText="Confirmer le mot de passe" style="-fx-background-color: transparent; -fx-border-color: #eeba1f; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </PasswordField>
+      <TextField layoutX="86.0" layoutY="157.0" prefHeight="26.0" prefWidth="196.0" promptText="Ex: Koffi" style="-fx-background-color: transparent; -fx-border-color: #eeba1f; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="87.0" layoutY="129.0" text="Nom d'utilisateur" textFill="#ebb03a">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="201.0" text="Mot de passe" textFill="#ebb03a">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Label>
+      <PasswordField layoutX="87.0" layoutY="225.0" prefHeight="26.0" prefWidth="196.0" promptText="Entrer un mot de passe" style="-fx-background-color: transparent; -fx-border-color: #eeba1f; -fx-border-width: 0px 0px 2px 0px;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </PasswordField>
+      <Button fx:id="btnValider" layoutX="128.0" layoutY="354.0" mnemonicParsing="false" onAction="#se_connecter" onMouseClicked="#s_inscrire" prefWidth="90.0" styleClass="btnIns" stylesheets="@application.css" text="S'inscrire">
+         <font>
+            <Font name="Dubai Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutX="300.0" layoutY="3.0" prefHeight="24.0" prefWidth="42.0" style="-fx-background-color: #f2bf62; -fx-background-radius: 60 50 50 50;">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="27.0" layoutX="8.0" layoutY="-1.0" onMouseClicked="#close_app" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

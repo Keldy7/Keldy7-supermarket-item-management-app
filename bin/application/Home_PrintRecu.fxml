@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Extras.Recus_Commandes.RECUS.RecuPrintController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="187.0" prefWidth="726.0" style="-fx-background-color: #fdc357;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/main_icon.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion d'articles" textAlignment="CENTER" wrappingWidth="500.3994140625">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="70.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <Pane layoutX="335.0" layoutY="196.0" prefHeight="427.0" prefWidth="378.0">
+         <children>
+            <Text layoutX="103.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECAPITULATIF">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="textAreaRec" editable="false" focusTraversable="false" layoutX="19.0" layoutY="56.0" prefHeight="357.0" prefWidth="346.0" promptText="*****************__ STIC MARKET __****************" style="-fx-alignment: center;" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Black" size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.38">
+                     <input>
+                        <DropShadow height="32.66" radius="15.83" spread="0.22" width="32.66" />
+                     </input>
+                  </Glow>
+               </effect></TextArea>
+         </children>
+      </Pane>
+      <Label layoutX="13.0" layoutY="257.0" text="Client concerné :">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_pdf" layoutX="203.0" layoutY="313.0" mnemonicParsing="false" onAction="#printPDF" styleClass="btnImp" stylesheets="@application.css" text="IMPRIMER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+      <Hyperlink fx:id="menu" layoutX="222.0" layoutY="581.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#goto_Menu" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #fdc357;" text="Menu" underline="true">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Hyperlink>
+      <Button fx:id="btn_recherche" layoutX="46.0" layoutY="316.0" mnemonicParsing="false" onAction="#rechercher" styleClass="btnRech" stylesheets="@application.css" text="RECHERCHER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="textFieldCli" layoutX="143.0" layoutY="255.0" prefHeight="25.0" prefWidth="155.0" promptText="Selectionner le client" style="-fx-background-color: #ffd95e;" AnchorPane.rightAnchor="428.0" />
+      <BorderPane layoutX="315.0" layoutY="186.0" prefHeight="446.0" prefWidth="15.0" style="-fx-background-color: #fdc357;" />
+   </children>
+</AnchorPane>

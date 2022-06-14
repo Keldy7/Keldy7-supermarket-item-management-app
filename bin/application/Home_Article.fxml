@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ARTICLES.ArticleController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="187.0" prefWidth="818.0" style="-fx-background-color: #fdc357;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/main_icon.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion d'articles" textAlignment="CENTER" wrappingWidth="500.3994140625">
+               <font>
+                  <Font name="Bodoni MT Bold Italic" size="70.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <BorderPane layoutX="311.0" layoutY="174.0" prefHeight="458.0" prefWidth="15.0" style="-fx-background-color: #fdc357;" />
+      <Pane layoutX="341.0" layoutY="196.0" prefHeight="427.0" prefWidth="475.0">
+         <children>
+            <TableView fx:id="listeArt" layoutX="14.0" layoutY="49.0" onMouseClicked="#selectionner" prefHeight="364.0" prefWidth="441.0" style="-fx-background-color: #ffd95e;">
+              <columns>
+                <TableColumn fx:id="libA" editable="false" prefWidth="121.0" style="-fx-background-color: #fdc357; -fx-alignment: center; -fx-font-family: Arial Black;" text="LIBELLE" />
+                <TableColumn fx:id="prixA" editable="false" prefWidth="74.0" style="-fx-background-color: #fdc357; -fx-font-family: Arial Black; -fx-alignment: center;" text="PRIX" />
+                  <TableColumn fx:id="Cat" editable="false" prefWidth="134.0" style="-fx-background-color: #fdc357; -fx-font-family: Arial Black; -fx-alignment: center;" text="Catégorie" />
+                  <TableColumn fx:id="Ray" editable="false" prefWidth="109.0" style="-fx-background-color: #fdc357; -fx-font-family: Arial Black; -fx-alignment: center;" text="Rayon" />
+                  <TableColumn fx:id="idA" prefWidth="71.0" style="-fx-background-color: #fdc357; -fx-alignment: center; -fx-font-family: Arial Black;" text="CODE" visible="false" />
+              </columns>
+            </TableView>
+            <Text layoutX="110.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTE DES ARTICLES">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label layoutX="15.0" layoutY="220.0" text="Code :" visible="false">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="261.0" text="Libellé :">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="301.0" text="Prix :">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="342.0" text="Catégorie :">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldCode" layoutX="122.0" layoutY="219.0" prefWidth="180.0" visible="false" />
+      <TextField fx:id="textFieldPrix" layoutX="121.0" layoutY="300.0" prefWidth="180.0" />
+      <TextField fx:id="textFieldLib" layoutX="121.0" layoutY="260.0" prefWidth="180.0" />
+      <Button fx:id="btn_ajout" layoutX="16.0" layoutY="473.0" mnemonicParsing="false" onAction="#ajouter" styleClass="btnAdd" stylesheets="@application.css" text="AJOUTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_modif" layoutX="114.0" layoutY="473.0" mnemonicParsing="false" onAction="#modifier" styleClass="btnModif" stylesheets="@application.css" text="MODIFIER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_sup" layoutX="215.0" layoutY="473.0" mnemonicParsing="false" onAction="#supprimer" styleClass="btnSup" stylesheets="@application.css" text="SUPPRIMER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPremier" layoutX="27.0" layoutY="530.0" mnemonicParsing="false" onAction="#premierEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-media-step-backward.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnDernier" layoutX="248.0" layoutY="530.0" mnemonicParsing="false" onAction="#dernierEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-media-step-forward.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnPrecedent" layoutX="89.0" layoutY="530.0" mnemonicParsing="false" onAction="#precedentEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-chevron-circle-left-alt.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnSuivant" layoutX="184.0" layoutY="530.0" mnemonicParsing="false" onAction="#suivantEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-chevron-circle-right-alt.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="13.0" layoutY="385.0" text="Rayon :">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="menu" layoutX="222.0" layoutY="581.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#goto_Menu" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #fdc357;" text="Menu" underline="true">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cil-home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Hyperlink>
+      <Button fx:id="btn_nouveau" layoutX="113.0" layoutY="427.0" mnemonicParsing="false" onAction="#nouveau" styleClass="btnNouv" stylesheets="@application.css" text="NOUVEAU">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="textFieldCat" layoutX="122.0" layoutY="340.0" prefHeight="25.0" prefWidth="180.0" promptText="Selectionner la catégorie" style="-fx-background-color: #ffd95e;" />
+      <ComboBox fx:id="textFieldRay" layoutX="121.0" layoutY="383.0" prefHeight="25.0" prefWidth="180.0" promptText="Selectionner le rayon" style="-fx-background-color: #ffd95e;" />
+   </children>
+</AnchorPane>

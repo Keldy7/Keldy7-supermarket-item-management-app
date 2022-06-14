@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Extras.Recus_Commandes.COMMANDES.CommandeFController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="786.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="187.0" prefWidth="779.0" style="-fx-background-color: #fdc357;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/main_icon.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion d'articles" textAlignment="CENTER" wrappingWidth="500.3994140625">
+                     <font>
+                        <Font name="Bodoni MT Bold Italic" size="70.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <BorderPane layoutX="347.0" layoutY="174.0" prefHeight="458.0" prefWidth="15.0" style="-fx-background-color: #fdc357;" />
+            <Pane layoutX="369.0" layoutY="196.0" prefHeight="427.0" prefWidth="404.0">
+               <children>
+                  <TableView fx:id="listeCom" layoutX="36.0" layoutY="49.0" onMouseClicked="#selectionner" prefHeight="364.0" prefWidth="330.0" style="-fx-background-color: #ffd95e; -fx-alignment: center;">
+                     <columns>
+                        <TableColumn fx:id="dateCom" editable="false" prefWidth="108.0" style="-fx-background-color: #fdc357; -fx-alignment: center; -fx-font-family: Arial Black;" text="DATE" />
+                        <TableColumn fx:id="qteCom" editable="false" resizable="false" style="-fx-background-color: #fdc357; -fx-font-family: Arial Black; -fx-alignment: center;" text="QUANTITE" />
+                        <TableColumn fx:id="ArtCom" editable="false" prefWidth="140.0" resizable="false" style="-fx-background-color: #fdc357; -fx-font-family: Arial Black; -fx-alignment: center;" text="ARTICLE" />
+                        <TableColumn fx:id="idCom" editable="false" prefWidth="47.0" resizable="false" style="-fx-background-color: #fdc357; -fx-font-family: Arial Black; -fx-alignment: center;" text="CODE" visible="false" />
+                     </columns>
+                  </TableView>
+                  <Text layoutX="73.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LISTE DES COMMANDES">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Label layoutX="11.0" layoutY="196.0" text="Code :" visible="false">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="249.0" text="Date de commande :">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="289.0" text="Quantité commandée :">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="330.0" text="Article commandée :">
+               <font>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldCode" layoutX="195.0" layoutY="195.0" prefHeight="25.0" prefWidth="143.0" visible="false" />
+            <TextField fx:id="textFieldQte" layoutX="192.0" layoutY="288.0" prefHeight="25.0" prefWidth="143.0" />
+            <Button fx:id="btn_ajout" layoutX="36.0" layoutY="454.0" mnemonicParsing="false" onAction="#ajouter" styleClass="btnAdd" stylesheets="@application.css" text="AJOUTER">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_modif" layoutX="134.0" layoutY="454.0" mnemonicParsing="false" onAction="#modifier" styleClass="btnModif" stylesheets="@application.css" text="MODIFIER">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_sup" layoutX="236.0" layoutY="454.0" mnemonicParsing="false" onAction="#supprimer" styleClass="btnSup" stylesheets="@application.css" text="SUPPRIMER">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPremier" layoutX="38.0" layoutY="519.0" mnemonicParsing="false" onAction="#premierEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cil-media-step-backward.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnDernier" layoutX="267.0" layoutY="519.0" mnemonicParsing="false" onAction="#dernierEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cil-media-step-forward.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnPrecedent" layoutX="112.0" layoutY="519.0" mnemonicParsing="false" onAction="#precedentEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cil-chevron-circle-left-alt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnSuivant" layoutX="189.0" layoutY="519.0" mnemonicParsing="false" onAction="#suivantEnreg" prefHeight="33.0" prefWidth="39.0" style="-fx-background-color: #ffd95e;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cil-chevron-circle-right-alt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Hyperlink fx:id="menu" layoutX="259.0" layoutY="585.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#goto_MenuRecCom" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #fdc357;" text="Retour" underline="true">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cil-home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Hyperlink>
+            <Button fx:id="btn_nouveau" layoutX="133.0" layoutY="401.0" mnemonicParsing="false" onAction="#nouveau" styleClass="btnNouv" stylesheets="@application.css" text="NOUVEAU">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="textFieldArt" layoutX="177.0" layoutY="328.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #ffd95e;" />
+            <DatePicker fx:id="textFieldDateCom" layoutX="193.0" layoutY="248.0" prefHeight="25.0" prefWidth="143.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
